@@ -1,8 +1,9 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
     return `# ${data.title}
-
-  ${renderLicenseBadge(data.licenses)}
+ 
+  ## Description
+  ${data.description}
 
   ## Table of Contents
   * [Description](#description)
@@ -12,10 +13,6 @@ function generateMarkdown(data) {
   * [Contributing](#contributing)
   * [Tests](#tests)
   * [Questions](#questions)
-  * [Credits](#credits)
-
-  ## Description
-  ${data.description}
 
   ## Installation
   ${data.installation}
@@ -23,7 +20,8 @@ function generateMarkdown(data) {
   ## Usage
   ${data.usage}
 
-  ${renderLicenseSection(data.licenses)}
+  ## License
+  This project is licensed under the ${data.licenses} license.
 
   ## Contributing
   ${data.contributing}
@@ -32,12 +30,12 @@ function generateMarkdown(data) {
   ${data.tests}
 
   ## Questions
-  Have questions about this project?  
+  Have questions related to this project? Here are the contact details for it:
   GitHub: https://github.com/${data.github}  
   Email: ${data.email}
 
   ## Credits
-  ${data.name}
+This project was created by ${data.name}
 `;
 }
 

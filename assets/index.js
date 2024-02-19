@@ -4,43 +4,10 @@ const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
 
 // array of questions for user
-// const questions = [{
-//         type: 'input',
-//         name: 'name',
-//         message: 'What is your name?',
-//     },
-//     {
-//         type: 'input',
-//         name: 'location',
-//         message: 'Where are you from?',
-//     }, {
-//         type: 'input',
-//         name: 'hobby',
-//         message: 'What is your favorite hobby?',
-//     }, {
-//         type: 'input',
-//         name: 'food',
-//         message: 'What is your favorite food?',
-//     }, {
-//         type: 'input',
-//         name: 'github',
-//         message: 'Enter your GitHub Username',
-//     }, {
-//         type: 'input',
-//         name: 'linkedin',
-//         message: 'Enter your LinkedIn URL.',
-//     },
-
-// ];
 const questions = [{
         type: 'input',
-        name: 'name',
-        message: 'This is a README generator in GitHub! To start, please provide your name:',
-    },
-    {
-        type: 'input',
         name: 'github',
-        message: 'Enter your GitHub username:',
+        message: 'This is a README generator in GitHub! Enter your GitHub username:',
     },
     {
         type: 'input',
@@ -88,8 +55,8 @@ const questions = [{
         type: 'list',
         name: 'licenses',
         message: 'What license would you like to include?',
-        choices: ['MIT', 'Apache',
-            'GPL', 'MPL', 'BSD', 'OBSD', 'CC', 'ECL-2.0'
+        choices: ['MIT', 'Apache-2.0', 'BSD-2-Clause',
+            'GPL-3.0', 'MPL 2-0', 'BSL-1.0', 'LGPL-2.1'
         ],
         when: ({ confirmLicenses }) => {
             if (confirmLicenses) {
@@ -99,13 +66,30 @@ const questions = [{
             }
         }
     },
+    {
+        type: 'input',
+        name: 'name',
+        message: ' Additionally, please provide your name/nickname or other contributor (specifying it was contributor in brackets) :'
+    }
 ];
-// function to write README file
-function writeToFile(fileName, data) {}
+
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, generateMarkdown(data), function(error) {
+        if (error) {
+            return console.log(error);
+        }
+        console.log('README.md file created! Success!');
+
+    });
+}
 
 // function to initialize program
 function init() {
-    return inquirer.prompt(questions);
+    return inquirer.prompt(questions).then(function(data) {
+        var fileNameKind = 'README.md';
+        writeToFile(fileNameKind, data)
+    });
+
 }
 
 // function call to initialize program
