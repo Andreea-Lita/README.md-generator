@@ -72,36 +72,6 @@ const questions = [{
         message: ' Additionally, please provide your name/nickname or other contributor (specifying it was contributor in brackets) :'
     }
 ];
-const licenses = [
-    { name: 'MIT', badgeUrl: 'https://img.shields.io/badge/license-MIT-blue' },
-    { name: 'Apache-2.0', badgeUrl: 'https://img.shields.io/badge/license-Apache%2.0-blue' },
-    { name: 'BSD-2-Clause', badgeUrl: 'https://img.shields.io/badge/license-BSD-2-Clause-blue' },
-    { name: 'GPL-3.0', badgeUrl: 'https://img.shields.io/badge/license-GPL-3.0-blue' },
-    { name: 'MPL 2.0', badgeUrl: 'https://img.shields.io/badge/license-MPL%2.0-blue' },
-    { name: 'BSL-1.0', badgeUrl: 'https://img.shields.io/badge/license-BSL-1.0-blue' },
-    { name: 'LGPL-2.1', badgeUrl: 'https://img.shields.io/badge/license-LGPL-2.1-blue' },
-];
-
-// ... rest of your generateMarkdown function
-
-let badgeUrl = '';
-if (questions.confirmLicenses) {
-    // Check if user provided a custom URL
-    if (questions.licenseUrl) {
-        badgeUrl = questions.licenseUrl;
-    } else {
-        // Find badge URL from predefined list
-        const chosenLicense = licenses.find((license) => license.name === questions.licenses);
-        if (chosenLicense) {
-            badgeUrl = chosenLicense.badgeUrl;
-        } else {
-            console.warn('Invalid license selected. No badge URL generated.');
-        }
-    }
-}
-
-// ... rest of your code
-
 
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, generateMarkdown(data), function(error) {
@@ -109,7 +79,6 @@ function writeToFile(fileName, data) {
             return console.log(error);
         }
         console.log('README.md file created! Success!');
-
     });
 }
 
@@ -119,7 +88,6 @@ function init() {
         var fileNameKind = 'README.md';
         writeToFile(fileNameKind, data)
     });
-
 }
 
 // function call to initialize program
