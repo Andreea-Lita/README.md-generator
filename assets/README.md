@@ -1,9 +1,9 @@
-# t
+# d
  
-    ! MIT license
+    ! BSL-1.0 license
  
   ## Description
-  t
+  d
 
   ## Table of Contents
   * [Description](#description)
@@ -15,24 +15,24 @@
   * [Questions](#questions)
 
   ## Installation
-  t
+  d
 
   ## Usage
-  t
+  d
 
   ## Licenses
-  This project is covered under the MIT license, follow link for details: https://lbesson.mit-license.org/.
+  This project is covered under the BSL-1.0 license, follow link for details: https://opensource.org/licenses/BSL-1.0.
  
   ## Contributing
-  t
+  d
 
   ## Tests
-  t
+  d
 
   ## Questions
   Have questions related to this project? Here are the contact details for it:
-  GitHub: https://github.com/re  
-  Email: t
+  GitHub: https://github.com/d  
+  Email: d
 
   ## Credits
-This project was created by t
+This project was created by d

@@ -1,8 +1,6 @@
-const fs = require('fs');
-// Returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// Returns a license badge based on which license is passed in, If there is no license, return an empty string
 var renderLicenseBadge = (licensee) => {
-    return licensee ? `! ${licensee} license` : '';
+    return licensee ? `! ${licensee} License !` : '';
 }
 
 // Returns the license link
