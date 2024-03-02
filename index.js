@@ -74,7 +74,10 @@ const questions = [{
 ];
 
 function writeToFile(fileName, data) {
-    fs.writeFile(fileName, generateMarkdown(data), function(error) {
+    //specify folder where the new readme.md file will be generated
+    const folderPath = path.join(__dirname, './images');
+    const filePath = path.join(folderPath, fileName);
+    fs.writeFile(filePath, generateMarkdown(data), function(error) {
         if (error) {
             return console.log(error);
         }

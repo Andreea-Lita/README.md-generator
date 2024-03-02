@@ -1,9 +1,9 @@
-# d
+# 
  
-    ! BSL-1.0 license
+    
  
   ## Description
-  d
+  ;lknblk
 
   ## Table of Contents
   * [Description](#description)
@@ -15,24 +15,23 @@
   * [Questions](#questions)
 
   ## Installation
-  d
+  ;lknblkpojp
 
   ## Usage
-  d
+  
 
-  ## Licenses
-  This project is covered under the BSL-1.0 license, follow link for details: https://opensource.org/licenses/BSL-1.0.
+  
  
   ## Contributing
-  d
+  ;lo
 
   ## Tests
-  d
+  uiuy
 
   ## Questions
   Have questions related to this project? Here are the contact details for it:
-  GitHub: https://github.com/d  
-  Email: d
+  GitHub: https://github.com/  
+  Email: 
 
   ## Credits
-This project was created by d
+This project was created by iioih

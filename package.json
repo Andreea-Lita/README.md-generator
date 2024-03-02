@@ -1,0 +1,15 @@
+{
+  "name": "readme.md-generator",
+  "version": "1.0.0",
+  "description": "Generates a Github readme file based on user input for it. It can be used to generate quickly a professional readme, so developers can focus more on working on their projects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^6.5.0"
+  }
+}
